@@ -1,12 +1,11 @@
-import React from "react";
 
-const Ticket = props => {
+export default function Ticket({ name, description, id, onDelete }) {
+
     return (
-        <React.Fragment>
-            <div>Name</div>
-            <div>Description</div>
-        </React.Fragment>
+        <div>
+            <p>{name}</p>
+            <p>{description}</p>
+            <button onClick={() => onDelete(id)}>delete</button>
+        </div>
     )
 }
-
-export default Ticket;
